@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="2.3.1" />
+        <PackageReference Include="nunit" Version="3.11.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.12.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="TestData\SimpleErrorTestData.cs" />
+        <EmbeddedResource Include="TestData\SimpleValidCastsTestData.cs" />
+    </ItemGroup>
+<!--    -->
+<!--    <ItemGroup>-->
+<!--        <Compile Remove="TestData\SimpleErrorTestData.cs" />-->
+<!--    </ItemGroup>-->
+    
+    <ItemGroup>
+      <ProjectReference Include="..\DebuggerComInteropAnalyzer\DebuggerComInteropAnalyzer.csproj" />
+    </ItemGroup>
+
+</Project>
